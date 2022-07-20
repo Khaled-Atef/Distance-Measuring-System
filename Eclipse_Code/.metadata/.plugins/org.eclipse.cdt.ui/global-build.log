@@ -1,0 +1,65 @@
+17:47:46 **** Incremental Build of configuration Debug for project Eclipse_Code ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Eclipse_Code.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    8738 bytes (53.3% Full)
+(.text + .data + .bootloader)
+
+Data:         27 bytes (2.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:57:25 **** Incremental Build of configuration Debug for project Eclipse_Code ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Eclipse_Code.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    8738 bytes (53.3% Full)
+(.text + .data + .bootloader)
+
+Data:         27 bytes (2.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:00:53 **** Incremental Build of configuration Debug for project Eclipse_Code ****
+make all 
+Building file: ../application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"application.d" -MT"application.o" -c -o "application.o" "../application.c"
+Finished building: ../application.c
+ 
+Building target: Eclipse_Code.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Eclipse_Code.map -mmcu=atmega16 -o "Eclipse_Code.elf"  ./ICU.o ./application.o ./gpio.o ./lcd.o ./ultrasonic.o   
+Finished building target: Eclipse_Code.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Eclipse_Code.elf  >"Eclipse_Code.lss"
+Finished building: Eclipse_Code.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Eclipse_Code.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    8738 bytes (53.3% Full)
+(.text + .data + .bootloader)
+
+Data:         27 bytes (2.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

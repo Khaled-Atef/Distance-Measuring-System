@@ -1,0 +1,31 @@
+/*
+ * application.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: khaled Atef
+ */
+#include <avr/io.h>
+#include "std_types.h"
+#include "ultrasonic.h"
+#include "lcd.h"
+#include "gpio.h"
+
+int main (void){
+	SREG|=(1<<7);
+	LCD_init();
+	uint16 distance;
+	Ultrasonic_init();
+	Ultrasonic_Trigger();
+
+		while(1){
+			distance = Ultrasonic_readDistance();
+			LCD_displayString("Distance=");
+			Ultrasonic_Trigger();
+
+			LCD_intgerToString(distance);
+			LCD_moveCursor(0,12);
+			LCD_displayString("cm");
+			LCD_moveCursor(0,0);
+		}
+
+}

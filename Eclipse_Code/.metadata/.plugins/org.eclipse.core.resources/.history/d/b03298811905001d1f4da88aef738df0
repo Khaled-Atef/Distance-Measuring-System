@@ -1,0 +1,13 @@
+/*
+ * application.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: khaled Atef
+ */
+#include "ultrasonic.h"
+#include "lcd.h"
+#include "gpio.h"
+
+int main (void){
+
+}
